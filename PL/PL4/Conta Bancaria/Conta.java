@@ -39,8 +39,8 @@ public class Conta{
 	}
 	
 	public void depositar(double quantia){
-		quantia = input.nextDouble();
 		
+		quantia = input.nextDouble();
 		if(quantia > 0 ){
 		saldo = saldo + quantia;
 		}else{
@@ -49,7 +49,6 @@ public class Conta{
 	}
 	public void levantar(double quantia){
 		quantia = input.nextDouble();
-		
 		if( quantia > 0 && saldo >= quantia){
 		saldo = saldo - quantia;
 		}else{
