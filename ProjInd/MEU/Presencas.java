@@ -1,56 +1,50 @@
 import java.util.Scanner;
-
 public class Presencas{
-	private int alunos;
-	private int totaulas;
-	private int presencas;
-	private double media;
-	private double percentagem;
-	Scanner input = new Scanner(System.in); 
-	
-	public Presencas(int alunos, int totaulas){
-		this.alunos = alunos;
-		this.totaulas = totaulas;
-	}
-	
-	public int getAlunos(){
-		return alunos;
-	}
-	
-	public int getTotaulas(){
-		return totaulas;
-	}
-	
-	public int getPresencas(){
-		return presencas;
-	}
-	
-	public double getMedia(){
-		return media;
-	}
-	
-	public double getPercentagem(){
-		return percentagem;
-	}
-	
-	public void setAlunos(int alunos){
-		System.out.println("Numero de alunos inscritos");
-		alunos = input.nextInt();
-		alunos = alunos + alunos;
-	}
-	
-	public void setTotaulas(int totaulas){
-		System.out.println("Numero de aulas no semestre(1 a 15)");
-		totaulas = input.nextInt();
-		if(totaulas > 15 && totaulas < 1){
-			System.out.println("Numero de aulas invalido");
-			System.out.println("Numero de aulas no semestre(1 a 15)");
-			totaulas = input.nextInt();
+	public static void main(String[] args) {
+		
+		int presentes= 0, inscritos, tot_aulas, presencatotal= 0,n_perc = 0;
+		double media, percentagem;
+		
+		Scanner input = new Scanner (System.in);
+		
+		//Alunos inscritos
+		System.out.println("Numero de alunos inscritos: ");
+		inscritos = input.nextInt();
+		
+		//Numero total de aulas(max 15)
+		System.out.println("Numero total de aulas no semestre");
+		tot_aulas = input.nextInt();
+		while(tot_aulas > 15){
+			System.out.println("Total de aulas no semestre nao pode ser superior a 15");
+			System.out.println("Numero total de aulas no semestre");
+			tot_aulas = input.nextInt();
 		}
-	}
+		
+		//Registar presencas
+		for(int i = 1; i <= tot_aulas; i++){
+		System.out.println("Alunos presentes na aula " + i + ": ");
+		presentes = input.nextInt();
+		
+				while(presentes > inscritos){
+					System.out.println("Alunos presentes superior a inscritos");
+					System.out.println("Alunos presentes na aula " + i + ": ");
+					presentes = input.nextInt();
+				}
 	
-	public void setPresencas(int presencas){
-		this.presencas = presencas;
+				percentagem = 100 -((double)presentes / inscritos * 100);
+				if(percentagem > 20){
+					n_perc ++;
+				}
+				
+				presencatotal = presencatotal + presentes;
+		}
+		
+		//media de presencas por aula
+		media =(double) presencatotal / tot_aulas;
+		System.out.println("Media de presencas por aula " + media);
+		
+		//percentagem faltas
+		percentagem = presentes / inscritos * 100;
+		System.out.println("Numero de aulas com mais de 20% faltas: " + n_perc);
 	}
-
 }
