@@ -40,7 +40,6 @@ public class Conta{
 	
 	public void depositar(double quantia){
 		
-		quantia = input.nextDouble();
 		if(quantia > 0 ){
 		saldo = saldo + quantia;
 		}else{
