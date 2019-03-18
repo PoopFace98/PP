@@ -1,10 +1,13 @@
 public class Empregado {
     
     private double salDia;
-    String codigo;
-    String nome;
-    int dias;
-
+    private String codigo;
+    private String nome;
+    private int dias;
+	private double salario;
+	public Empregado(){}
+	
+	
     public Empregado(double salDia, String codigo, String nome, int dias) {
         this.salDia = salDia;
         this.codigo = codigo;
@@ -44,9 +47,13 @@ public class Empregado {
         return dias;
     }
 
+	public double salario(){
+		return salario = salDia*dias ;
+	}
 	
-	
-	
+	public void print(){
+		System.out.println("Nome: " +nome+ ", Dias trabalhados: " + dias + ", Salario diario: " + salario);
+	}
 	
 	
 	
