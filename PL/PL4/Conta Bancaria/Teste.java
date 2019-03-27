@@ -5,11 +5,11 @@ public class Teste{
 	
 			c1.consultar();
 
-			System.out.println("Quanto pretende levantar? ");
-			c1.levantar(0);
+			//System.out.println("Quanto pretende levantar? ");
+			//c1.levantar(0);
 
 			System.out.println("Quanto pretende depositar? ");
-			c1.depositar(0);
+			c1.depositar(7);
 
 			c1.consultar();
 		

@@ -1,0 +1,119 @@
+<Project>
+  <Name>ProjetoGrupo</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Projeto</Name>
+        <Access>Public</Access>
+        <Location left="217" top="85" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String titulo</Member>
+        <Member type="Field">Gestor gestor</Member>
+        <Member type="Field">int dataInicio</Member>
+        <Member type="Field">LocalDate dataFim</Member>
+        <Member type="Field">int descricao</Member>
+        <Member type="Field">ListaTarefasProjeto tarefas</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ListaProjetos</Name>
+        <Access>Public</Access>
+        <Location left="438" top="85" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Tarefa</Name>
+        <Access>Public</Access>
+        <Location left="217" top="355" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">String titulo</Member>
+        <Member type="Field">String descricao</Member>
+        <Member type="Field">Utilizador criadoPor</Member>
+        <Member type="Field">PrioridadeTarefa prioridade</Member>
+        <Member type="Field">EstadoTarefa estado</Member>
+        <Member type="Field">LocalDate dataFim</Member>
+        <Member type="Method">public String getTitulo()</Member>
+        <Member type="Method">public String getDescricao()</Member>
+        <Member type="Method">public void setTitulo(String titulo)</Member>
+        <Member type="Method">public void setDescricao(String Descricao)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ListaTarefas</Name>
+        <Access>Public</Access>
+        <Location left="438" top="355" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Gestor</Name>
+        <Access>Public</Access>
+        <Location left="556" top="608" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Utilizador</Name>
+        <Access>Public</Access>
+        <Location left="841" top="390" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Colaborador</Name>
+        <Access>Public</Access>
+        <Location left="1072" top="583" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>EstadoTarefa</Name>
+        <Access>Public</Access>
+        <Location left="331" top="586" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>ALTA</Value>
+        <Value>MEDIA</Value>
+        <Value>BAIXA</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>PrioridadeTarefa</Name>
+        <Access>Public</Access>
+        <Location left="129" top="565" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>NAO_INICIADA</Value>
+        <Value>INICIADA</Value>
+        <Value>CONCLUIDA</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>ListaTarefasProjeto</Name>
+        <Access>Public</Access>
+        <Location left="790" top="85" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="4" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
